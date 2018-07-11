@@ -10,7 +10,7 @@
     <mat-toolbar color="primary">Menu</mat-toolbar>
 
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="offer">Offerte</a>
       <a mat-list-item href="#">Link 2</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
@@ -33,7 +33,9 @@
 
     </mat-toolbar>
 
-    <!-- Content -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
