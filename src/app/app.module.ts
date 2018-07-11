@@ -21,12 +21,14 @@ import {
 // Components
 import { NavigationComponent } from './navigation/navigation.component';
 import { OfferComponent } from './offer/offer.component';
+import { ProductSelectorComponent } from './offer/components/product-selector/product-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     OfferComponent,
+    ProductSelectorComponent,
   ],
   imports: [
     BrowserModule,
