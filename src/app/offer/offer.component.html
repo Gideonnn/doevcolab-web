@@ -1,3 +1,40 @@
-<p>
-  offer works!
-</p>
+<form [formGroup]="form" novalidate>
+
+  <mat-form-field>
+    <input placeholder="Klant" formControlName="customer" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Huisnummer" formControlName="buildingNumber" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Postcode" formControlName="postalCode" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Plaats" formControlName="city" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Telefoon nr." formControlName="telephone" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Email" formControlName="email" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Project" formControlName="project" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Hoofdcategorieën">
+      <mat-option value="1">Categorie 1</mat-option>
+      <mat-option value="2">Categorie 2</mat-option>
+      <mat-option value="3">Categorie 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Opslaan</button>
+</form>
