@@ -1,36 +1,53 @@
 <form [formGroup]="form" novalidate>
 
-  <mat-form-field>
-    <input placeholder="Klant" formControlName="customer" matInput>
-  </mat-form-field>
+  <mat-card>
+    <mat-card-title>
+      Bedrijfsgegevens
+    </mat-card-title>
 
-  <mat-form-field>
-    <input placeholder="Huisnummer" formControlName="buildingNumber" matInput>
-  </mat-form-field>
+    <mat-card-content>
+      <mat-form-field>
+        <input placeholder="Klant" formControlName="customer" matInput>
+      </mat-form-field>
 
-  <mat-form-field>
-    <input placeholder="Postcode" formControlName="postalCode" matInput>
-  </mat-form-field>
+      <mat-form-field>
+        <input placeholder="Huisnummer" formControlName="buildingNumber" matInput>
+      </mat-form-field>
 
-  <mat-form-field>
-    <input placeholder="Plaats" formControlName="city" matInput>
-  </mat-form-field>
+      <mat-form-field>
+        <input placeholder="Postcode" formControlName="postalCode" matInput>
+      </mat-form-field>
 
-  <mat-form-field>
-    <input placeholder="Telefoon nr." formControlName="telephone" matInput>
-  </mat-form-field>
+      <mat-form-field>
+        <input placeholder="Plaats" formControlName="city" matInput>
+      </mat-form-field>
 
-  <mat-form-field>
-    <input placeholder="Email" formControlName="email" matInput>
-  </mat-form-field>
+      <mat-form-field>
+        <input placeholder="Telefoon nr." formControlName="telephone" matInput>
+      </mat-form-field>
 
-  <mat-form-field>
-    <input placeholder="Project" formControlName="project" matInput>
-  </mat-form-field>
+      <mat-form-field>
+        <input placeholder="Email" formControlName="email" matInput>
+      </mat-form-field>
 
-  <app-product-selector
-    [productGroups]="productGroups">
-  </app-product-selector>
+      <mat-form-field>
+        <input placeholder="Project" formControlName="project" matInput>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>
+      Product toevoegen
+    </mat-card-title>
+
+    <mat-card-content>
+      <app-product-selector
+        [productGroups]="productGroups">
+      </app-product-selector>
+    </mat-card-content>
+  </mat-card>
 
   <button mat-raised-button color="primary">Opslaan</button>
+
 </form>

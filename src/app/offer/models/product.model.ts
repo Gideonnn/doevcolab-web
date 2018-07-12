@@ -1,9 +1,9 @@
 export interface Product {
-  articlenumber: string;
+  articleNumber: string;
   brand: string;
   model: string;
   properties: string[];
-  purchaseprice: number;
-  sellingprice: number;
+  purchasePrice: number;
+  sellingPrice: number;
   supplier: string;
 }

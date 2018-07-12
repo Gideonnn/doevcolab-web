@@ -1,0 +1,18 @@
+mat-accordion mat-panel-title,
+mat-accordion mat-panel-description {
+  flex-basis: 0;
+  align-items: center;
+}
+
+mat-accordion mat-panel-description {
+  justify-content: flex-end;
+}
+
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+mat-chip {
+  height: 20px;
+  font-size: 10px;
+}

@@ -1,4 +1,4 @@
-import { ApiOffer, Offer } from '../models';
+import { ApiOffer, ApiProductGroup, Offer, ProductGroup } from '../models';
 
 export const toOffer = (offer: ApiOffer): Offer => {
   return {
@@ -9,5 +9,12 @@ export const toOffer = (offer: ApiOffer): Offer => {
     telephone: offer.telefoon,
     email: offer.email,
     project: offer.project,
+  };
+};
+
+export const toProductGroup = (productGroup: ApiProductGroup): ProductGroup => {
+  return {
+    name: productGroup.name,
+    products: productGroup.Products,
   };
 };

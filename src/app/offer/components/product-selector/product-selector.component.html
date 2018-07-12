@@ -1,5 +1,15 @@
-<mat-form-field>
-  <mat-select placeholder="Product groepen">
-    <mat-option *ngFor="let productGroup of productGroups" [value]="productGroup.name">{{ productGroup.name }}</mat-option>
-  </mat-select>
-</mat-form-field>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let productGroup of productGroups">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ productGroup.name }}</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div *ngFor="let product of productGroup.products">
+      <app-product
+        [product]="product">
+      </app-product>
+    </div>
+
+  </mat-expansion-panel>
+</mat-accordion>

@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatButtonModule,
+  MatCardModule,
+  MatChipsModule,
+  MatExpansionModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -22,6 +25,7 @@ import {
 // Components
 import { NavigationComponent } from './navigation/navigation.component';
 import { OfferComponent } from './offer/offer.component';
+import { ProductComponent } from './offer/components/product/product.component';
 import { ProductSelectorComponent } from './offer/components/product-selector/product-selector.component';
 
 @NgModule({
@@ -29,6 +33,7 @@ import { ProductSelectorComponent } from './offer/components/product-selector/pr
     AppComponent,
     NavigationComponent,
     OfferComponent,
+    ProductComponent,
     ProductSelectorComponent,
   ],
   imports: [
@@ -38,6 +43,9 @@ import { ProductSelectorComponent } from './offer/components/product-selector/pr
     HttpClientModule,
     LayoutModule,
     MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
