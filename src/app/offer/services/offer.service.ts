@@ -15,7 +15,7 @@ import { toOffer } from '../utils/offer.utils';
 })
 export class OfferService {
 
-  readonly base = 'http://localhost:3000/offertes';
+  readonly base = 'http://localhost:3000/offers';
 
   constructor(private http: HttpClient) { }
 
