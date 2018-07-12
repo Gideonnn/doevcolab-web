@@ -11,3 +11,18 @@
   background-color: #fff; // Fix for a weird bg color bug
   padding: 24px;
 }
+
+mat-list-item {
+  padding-left: 12px;
+}
+
+.title {
+  color: #bbb;
+  font-size: 13px;
+  padding-left: 0px;
+
+  &:hover {
+    background-color: inherit !important;
+    cursor: default;
+  }
+}
