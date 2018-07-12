@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 // Models
-import { Offer } from './models';
+import { Offer, ProductGroup } from './models';
 
 // Services
-import { OfferService } from './services';
+import { OfferService, ProductGroupService } from './services';
 
 @Component({
   selector: 'app-offer',
@@ -16,8 +16,12 @@ export class OfferComponent implements OnInit {
 
   form: FormGroup;
   offers: Offer[];
+  productGroups: ProductGroup[];
 
-  constructor(private offerService: OfferService) {
+  constructor(
+    private offerService: OfferService,
+    private productGroupService: ProductGroupService,
+  ) {
     this.form = new FormGroup({
       customer: new FormControl('', Validators.required),
       buildingNumber: new FormControl('', Validators.required),
@@ -34,6 +38,12 @@ export class OfferComponent implements OnInit {
       .getAll()
       .subscribe(offers => {
         this.offers = offers;
+      });
+
+    this.productGroupService
+      .getAll()
+      .subscribe(productGroups => {
+        this.productGroups = productGroups;
       });
   }
 }

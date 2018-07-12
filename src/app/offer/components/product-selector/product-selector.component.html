@@ -1,7 +1,5 @@
 <mat-form-field>
-  <mat-select placeholder="Hoofdcategorieën">
-    <mat-option value="1">Categorie 1</mat-option>
-    <mat-option value="2">Categorie 2</mat-option>
-    <mat-option value="3">Categorie 3</mat-option>
+  <mat-select placeholder="Product groepen">
+    <mat-option *ngFor="let productGroup of productGroups" [value]="productGroup.name">{{ productGroup.name }}</mat-option>
   </mat-select>
 </mat-form-field>

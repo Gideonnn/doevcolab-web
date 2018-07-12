@@ -28,7 +28,9 @@
     <input placeholder="Project" formControlName="project" matInput>
   </mat-form-field>
 
-  <app-product-selector></app-product-selector>
+  <app-product-selector
+    [productGroups]="productGroups">
+  </app-product-selector>
 
   <button mat-raised-button color="primary">Opslaan</button>
 </form>

@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+
+// Models
+import { ProductGroup } from '../../models';
 
 @Component({
   selector: 'app-product-selector',
@@ -7,6 +10,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductSelectorComponent implements OnInit {
+
+  @Input() productGroups: ProductGroup[];
 
   constructor() { }
 
