@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { registerLocaleData } from '@angular/common';
+import localeNl from '@angular/common/locales/nl';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,7 +58,13 @@ import { ProductSelectorComponent } from './offer/components/product-selector/pr
     MatToolbarModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'nl-NL' }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeNl);
+  }
+}
