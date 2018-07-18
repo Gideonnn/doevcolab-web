@@ -2,6 +2,7 @@ import { ApiOffer, ApiProduct, ApiProductGroup, Offer, Product, ProductGroup } f
 
 export const toOffer = (offer: ApiOffer): Offer => {
   return {
+    id: offer._id,
     customer: offer.klant,
     buildingNumber: offer.straathuisnummer,
     postalCode: offer.postcode,
