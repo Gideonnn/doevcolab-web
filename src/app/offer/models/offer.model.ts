@@ -1,10 +1,10 @@
 export interface Offer {
-  id: string;
-  customer: string;
   buildingNumber: number;
-  postalCode: string;
   city: string;
-  telephone: string;
+  customer: string;
   email: string;
+  id: string;
+  postalCode: string;
   project: string;
+  telephone: string;
 }

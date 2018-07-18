@@ -1,7 +1,7 @@
 export interface ApiProduct {
+  _id: string;
   articleNumber: string;
   brand: string;
-  _id: string;
   model: string;
   properties: string[];
   purchasePrice: number;

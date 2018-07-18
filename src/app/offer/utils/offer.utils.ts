@@ -2,14 +2,14 @@ import { ApiOffer, ApiProduct, ApiProductGroup, Offer, Product, ProductGroup } f
 
 export const toOffer = (offer: ApiOffer): Offer => {
   return {
-    id: offer._id,
-    customer: offer.klant,
     buildingNumber: offer.straathuisnummer,
-    postalCode: offer.postcode,
     city: offer.plaats,
-    telephone: offer.telefoon,
+    customer: offer.klant,
     email: offer.email,
+    id: offer._id,
+    postalCode: offer.postcode,
     project: offer.project,
+    telephone: offer.telefoon,
   };
 };
 
