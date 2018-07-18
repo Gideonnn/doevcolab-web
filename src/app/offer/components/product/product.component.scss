@@ -16,3 +16,19 @@ mat-chip {
   height: 20px;
   font-size: 10px;
 }
+
+.properties {
+
+  .prop {
+    display: flex;
+    flex-wrap: wrap;
+
+    span:nth-child(1) {
+      flex: 0 0 200px;
+    }
+
+    span:nth-child(2) {
+      flex: 0 0 auto;
+    }
+  }
+}

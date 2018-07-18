@@ -22,15 +22,38 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <p><strong>Artikelnummer</strong>: {{ product.articleNumber }}</p>
-    <p><strong>Inkoopprijs</strong>: € {{ product.purchasePrice }}</p>
-    <p><strong>Verkoopprijs</strong>: € {{ product.sellingPrice }}</p>
-    <p><strong>Leverancier</strong>: {{ product.supplier }}</p>
+    <div class="properties">
 
-    <p><strong>Eigenschappen</strong>:</p>
-    <mat-chip-list>
-      <mat-chip *ngFor="let prop of product.properties">{{ prop }}</mat-chip>
-    </mat-chip-list>
+      <div class="prop">
+        <span><strong>Artikelnummer</strong></span>
+        <span>{{ product.articleNumber }}</span>
+      </div>
+
+      <div class="prop">
+        <span><strong>Inkoopprijs</strong></span>
+        <span>{{ product.purchasePrice | currency:'EUR' }}</span>
+      </div>
+
+      <div class="prop">
+        <span><strong>Verkoopprijs</strong></span>
+        <span>{{ product.sellingPrice | currency:'EUR' }}</span>
+      </div>
+
+      <div class="prop">
+        <span><strong>Leverancier</strong></span>
+        <span>{{ product.supplier }}</span>
+      </div>
+
+      <div class="prop">
+        <span><strong>Eigenschappen</strong></span>
+        <span>
+          <mat-chip-list>
+            <mat-chip *ngFor="let prop of product.properties">{{ prop }}</mat-chip>
+          </mat-chip-list>
+        </span>
+      </div>
+
+    </div>
 
   </mat-expansion-panel>
 </mat-accordion>
