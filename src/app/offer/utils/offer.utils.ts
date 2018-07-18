@@ -14,6 +14,7 @@ export const toOffer = (offer: ApiOffer): Offer => {
 
 export const toProductGroup = (productGroup: ApiProductGroup): ProductGroup => {
   return {
+    id: productGroup._id,
     name: productGroup.name,
     products: productGroup.Products,
   };
