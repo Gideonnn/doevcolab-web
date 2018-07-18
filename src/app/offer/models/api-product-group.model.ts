@@ -1,7 +1,7 @@
-import { Product } from './product.model';
+import { ApiProduct } from './api-product.model';
 
 export interface ApiProductGroup {
   _id: string;
   name: string;
-  Products: Product[];
+  Products: ApiProduct[];
 }
