@@ -42,7 +42,10 @@
 
     <mat-card-content>
       <app-product-selector
-        [productGroups]="productGroups">
+        [addedProductIds]="addedProductIds"
+        [productGroups]="productGroups"
+        (addProduct)="onAddProduct($event)"
+        (removeProduct)="onRemoveProduct($event)">
       </app-product-selector>
     </mat-card-content>
 

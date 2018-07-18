@@ -3,19 +3,19 @@
 
     <mat-expansion-panel-header>
 
-      <mat-panel-title>{{ product.brand + product.model}}</mat-panel-title>
+      <mat-panel-title>
+        <p [matBadge]="getBadgeCount(product.id)" matBadgeOverlap="false" [matBadgeHidden]="getBadgeCount(product.id) === 0">
+          {{ product.brand + product.model }}
+        </p>
+      </mat-panel-title>
 
       <mat-panel-description>
 
-        <button mat-stroked-button color="primary">
+        <button mat-icon-button color="primary" (click)="onRemove(product.id, $event)">
           <mat-icon>remove</mat-icon>
         </button>
 
-        <button mat-stroked-button color="primary">
-          Toevoegen
-        </button>
-
-        <button mat-stroked-button color="primary">
+        <button mat-icon-button color="primary"  (click)="onAdd(product.id, $event)">
           <mat-icon>add</mat-icon>
         </button>
 

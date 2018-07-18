@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import {
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatChipsModule,
@@ -45,6 +46,7 @@ import { ProductSelectorComponent } from './offer/components/product-selector/pr
     BrowserAnimationsModule,
     HttpClientModule,
     LayoutModule,
+    MatBadgeModule,
     MatButtonModule,
     MatCardModule,
     MatChipsModule,

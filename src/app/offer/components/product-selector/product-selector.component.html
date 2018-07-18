@@ -2,12 +2,19 @@
   <mat-expansion-panel *ngFor="let productGroup of productGroups">
 
     <mat-expansion-panel-header>
-      <mat-panel-title>{{ productGroup.name }}</mat-panel-title>
+      <mat-panel-title>
+        <p [matBadge]="getBadgeCount(productGroup.id)" matBadgeOverlap="false" [matBadgeHidden]="getBadgeCount(productGroup.id) === 0">
+          {{ productGroup.name }}
+        </p>
+      </mat-panel-title>
     </mat-expansion-panel-header>
 
     <div *ngFor="let product of productGroup.products">
       <app-product
-        [product]="product">
+        [addedProductIds]="addedProductIds"
+        [product]="product"
+        (add)="onAddProduct($event)"
+        (remove)="onRemoveProduct($event)">
       </app-product>
     </div>
 

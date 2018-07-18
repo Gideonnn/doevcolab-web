@@ -11,7 +11,23 @@ import { Product } from '../../models';
 })
 export class ProductComponent {
 
+  @Input() addedProductIds: { [key: string]: number };
   @Input() product: Product;
 
-  @Output() add = new EventEmitter<Product>();
+  @Output() add = new EventEmitter<string>();
+  @Output() remove = new EventEmitter<string>();
+
+  getBadgeCount(productId: string) {
+    return this.addedProductIds[productId] || 0;
+  }
+
+  onAdd(productId: string, event: any) {
+    event.stopPropagation();
+    this.add.emit(productId);
+  }
+
+  onRemove(productId: string, event: any) {
+    event.stopPropagation();
+    this.remove.emit(productId);
+  }
 }

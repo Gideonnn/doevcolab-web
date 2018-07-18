@@ -14,6 +14,7 @@ import { OfferService, ProductGroupService } from './services';
 })
 export class OfferComponent implements OnInit {
 
+  addedProductIds: { [key: string]: number };
   form: FormGroup;
   offers: Offer[];
   productGroups: ProductGroup[];
@@ -22,6 +23,7 @@ export class OfferComponent implements OnInit {
     private offerService: OfferService,
     private productGroupService: ProductGroupService,
   ) {
+    this.addedProductIds = {};
     this.form = new FormGroup({
       customer: new FormControl('', Validators.required),
       buildingNumber: new FormControl('', Validators.required),
@@ -45,5 +47,25 @@ export class OfferComponent implements OnInit {
       .subscribe(productGroups => {
         this.productGroups = productGroups;
       });
+  }
+
+  onAddProduct(productId: string) {
+    if (this.addedProductIds[productId]) {
+      this.addedProductIds[productId]++;
+    } else {
+      this.addedProductIds[productId] = 1;
+    }
+  }
+
+  onRemoveProduct(productId: string) {
+    if (this.addedProductIds[productId]) {
+      this.addedProductIds[productId]--;
+
+      if (this.addedProductIds[productId] <= 0) {
+        delete this.addedProductIds[productId];
+      }
+    } else {
+      this.addedProductIds[productId] = 1;
+    }
   }
 }
