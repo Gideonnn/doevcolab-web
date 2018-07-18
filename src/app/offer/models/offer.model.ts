@@ -1,4 +1,5 @@
 export interface Offer {
+  id: string;
   customer: string;
   buildingNumber: number;
   postalCode: string;
